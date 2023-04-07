@@ -17,7 +17,7 @@ public class Person implements Serializable {
     private String surname;
     private int age;
     private String phone_number;
-    private String city_of_living;
+    private String city;
 
     public Person() {
     }
@@ -42,8 +42,8 @@ public class Person implements Serializable {
         return phone_number;
     }
 
-    public String getCity_of_living() {
-        return city_of_living;
+    public String getCity() {
+        return city;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Person implements Serializable {
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", phone_number='" + phone_number + '\'' +
-                ", city_of_living='" + city_of_living + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 }
