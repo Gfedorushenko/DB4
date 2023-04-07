@@ -28,13 +28,11 @@ public class PersonController {
 
     @GetMapping("/persons/age-less")
     public List<Person> getAuthorities(@RequestParam(name = "age") int age) {
-        System.out.println(age);
-        return personRepository.findAllByAgeLessThanOrderByAge(age);
+        return personRepository.findAllByAgeLessThanOrderByAgeJPQL(age);
     }
 
     @GetMapping("/persons/{name}+{surname}")
     public Optional<Person> getAuthorities(@PathVariable String name, @PathVariable String surname) {
-        System.out.println(name + surname);
         return personRepository.findAllByNameAndSurname(name, surname);
     }
 }
